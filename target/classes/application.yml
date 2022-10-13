@@ -1,0 +1,21 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://0.0.0.0:5432/shop
+    username: 'mysecrets'
+    password: 'root'
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+        format_sql: 'true'
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+
+server:
+  port: 9000
+
+mysecrets:
+  app:
+    jwtSecret: MySecretsSecretKey
+    jwtExpirationMs: 86400000
